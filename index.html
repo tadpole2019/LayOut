@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Raleway:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+
+<style>
+    :root{
+        --green-primary-color: #04AA6D;
+    }
+    
+    @media only screen and (max-width: 768px){
+        body{
+            min-width: 320px;
+            background-image: url(image/BG_stuff_mobile.png);
+            background-repeat: no-repeat;
+            background-position:center;
+            background-size: cover;
+            width: 100%;
+        }
+        main{
+            min-width: 320px;
+
+        }
+        header{
+            & nav{
+                display: none;
+            }
+            height: fit-content;
+        }
+        
+        .hero{
+            background-image: url(image/hero.svg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: contain;
+        }
+        .footer-bottom{
+            font-size: 8pt;
+            text-align: left;
+        }
+        .footer-logo-1{
+            width: 30px;
+        }
+        .botton{
+            background-color: var(--green-primary-color);
+            border: none;
+            color: white;
+            padding: 12px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: border-box;
+            font-size: 21px;
+            margin: 2px 2px;
+            cursor: pointer;
+        }
+
+        .botton2{
+            background-color: white;
+            border: 2px solid var(--green-primary-color);
+            color: var(--green-primary-color);
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: border-box;
+            font-size: 21px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button3{
+            background-color: white;
+            /* border: 5px solid var(--green-primary-color); */
+            color: var(--green-primary-color);
+            padding: 14px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 21px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    }
+    @media only screen and (min-width: 768px){
+        body{
+            min-width: 1440px;
+            background-image: url(image/BG_stuff.png);
+            background-repeat: no-repeat;
+            background-position:center;
+            background-size: cover;
+            width: 100%;
+        }
+        .botton{
+            background-color: var(--green-primary-color);
+            border: none;
+            color: white;
+            padding: 14px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .hero{
+            background-image: url(image/hero.svg);
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        main{
+            min-width: 1440px;
+        }
+
+        .botton2{
+            background-color: white;
+            border: 5px solid var(--green-primary-color);
+            color: var(--green-primary-color);
+            padding: 10px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button3{
+            background-color: white;
+            /* border: 5px solid var(--green-primary-color); */
+            color: var(--green-primary-color);
+            padding: 14px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .fs-large{
+            font-size: 48pt;
+        }
+    }
+    .card{
+        border-radius: 0;
+    }
+    .card-img-top{
+        width: 100%;
+    }
+    .card-body{
+        margin-top: -30px;
+        z-index: 6;
+        background-color: white;
+    }
+
+    .playfair{
+        font-family: 'Playfair Display', serif;
+    }
+    .raleway-black{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 900;
+    }
+    .raleway-ex-bold{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+    }
+    .raleway-bold{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+    }
+    .raleway{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+    }
+
+</style>
+
+<body>
+    <header class="main-header text-bg-light col-12 clearfix" style="width: 100%">
+        <div class="d-flex justify-content-between align-items-center mx-0 py-4">
+            <div>
+                <a class="px-2 py-4" href="">
+                    <img src="image/ninjamail_logo.svg" alt="" style="width: 80px;">
+                    <img src="image/ninjamail.svg" alt="" style="width: 120px;">
+                </a>
+            </div>          
+            <div class="d-flex">
+                <nav class="px-4 text-center">
+                    <ul class="nav justify-content-end fw-bolder align-items-center raleway-ex-bold">
+                        <li class="nav-item border-bottom border-success border-5 me-2">
+                            <a class="nav-link text-dark fs-5" aria-current="page" href="#">Features</a>
+                        </li>
+                        <li class="nav-item border-bottom border-success border-5 me-2">
+                            <a class="nav-link text-dark fs-5" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item border-bottom border-success border-5 me-2">
+                            <a class="nav-link text-dark fs-5" href="#">Services</a>
+                        </li>
+                        <li class="nav-item border-bottom border-success border-5 me-2">
+                            <a class="nav-link text-dark fs-5" href="#">Partners</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="botton fw-bolder px-4 py-2 me-2 raleway-ex-bold">SIGN UP FREE</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container col-xs-12 col-12 my-3 pb-5">
+            <div class="container col-sm-12 col-12 hero mx-0 pb-3">
+                <div class="p-3">
+                    <h1 class="py-2 playfair display-1">Create Stunning<br>Email Campaigns</h1>
+                    <p class="py-2 raleway">
+                        Create and launch email campaigns that captivate<br>
+                        your customers in just a few clicks.
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between justify-content-sm-start col-sm-6 gap-sm-5">
+                        <a href="" class="botton raleway-black" style="height: fit-content;">TRY NOW</a>
+                        <a href="" class="botton2 raleway-black">GET A DEMO</a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="container col-12 py-5">
+            <div class="card text-bg-dark col-sm-10 mx-auto">
+                <img src="image/customers.jpg" class="card-img" alt="...">
+                <div class="d-flex flex-column justify-content-center card-img-overlay">
+                    <h1 class="card-title mb-sm-5 playfair fs-large text-center">Reach More Customers</h1>
+                    <div class="mx-auto" style="width: fit-content; height: fit-content;">
+                        <a href="" class="button3 raleway-black mx-auto">
+                            LEARN NOW
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+       
+
+        <div class="container col-12 my-5">
+            <div class="my-5 py-4 row justify-content-between g-4">
+                <div class="col-sm-4 col-8 align-self-start">
+                    <div class="card border-light">
+                        <img src="image/launch.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text raleway">Launch campaigns but also find new customers. Our unique platform handles campaigns from
+                            start to end.</p>
+                            <a class="link-success text-decoration-none fw-bold" href="">Learn More></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-8 align-self-end my-5 ms-auto">
+                    <div class="card border-light my-5">
+                        <img src="image/start.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text raleway">Start building and sharing with your team today. NinjaMail is renowned for its industry
+                                leading team collaboration tools.</p>
+                            <a class="link-success text-decoration-none fw-bold" href="">Learn More></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-10 mx-auto my-5" style="border-width: 0px;">
+                    <div class="bg-transparent border-transparent align-self-end">
+                        <div class="p-2">
+                            <h5 class="display-4 fw-bold playfair my-5">
+                                The source for proven, engaging email campaigns
+                            </h5>
+                            <p class="raleway">
+                                Whether you’re a startup, small business, e-commerce store, or want to promote your app, NinjaMail has
+                                the feature set tailored for your business.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="container col-12 mt-5">
+            <div class="d-flex justify-content-center flex-wrap">
+                <div class="card bg-dark text-white mx-3 my-3">
+                    <img src="image/Frankie.jpg" class="card-img rounded-0" alt="..." style="height: 100%;">
+                    <div class="card-img-overlay d-flex justify-content-end flex-column">
+                        <div class="mb-3">
+                            <h1 class="card-title raleway-black">Frankie</h1>
+                            <p class="card-text raleway-bold">Member since 2016</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark text-white my-3">
+                    <img src="image/Camile.jpg" class="card-img rounded-0" alt="..." style="height: 100%;">
+                    <div class="card-img-overlay d-flex justify-content-end flex-column">
+                        <div class="container mb-3">
+                            <h1 class="card-title raleway-black">Camile</h1>
+                            <p class="card-text raleway-bold">Member since 2012</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark text-white mx-3 my-3">
+                <img src="image/Elayne.jpg" class="card-img rounded-0" alt="..." style="height: 100%;">
+                <div class="card-img-overlay d-flex justify-content-end flex-column">
+                    <div class="container mb-3">
+                        <h1 class="card-title raleway-black">Elayne</h1>
+                        <p class="card-text raleway-bold">Member since 2018</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-7 mx-auto my-5 playfair text-center">
+                <h1 class="display-4">Learn how others are reaching their audience easier than ever before.</h1>
+            </div>    
+        </div>
+
+        <div class="container">
+            <form class="col-9 row g-3 mx-auto justify-content-center">
+                <div class="mb-sm-3 col-sm-5">
+                    <input type="email" class="form-control form-control-lg lh-lg" id="exampleInputPassword1" placeholder="Enter your email">
+                    <div id="emailHelp" class="form-text text-success my-3 fs-5 ps-3 raleway">Thanks! Email received.</div>
+                </div>
+            
+                <div class="col-sm-4 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-success btn-lg rounded-0 raleway-black lh-lg ms-sm-3" style="height: fit-content;">JOIN OUR LIST</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="container pb-5">
+            <div class="col-10 mx-auto py-5">
+                <div class="text-center col-sm-5 playfair mx-auto py-5">
+                    <h1 class="display-4">All the best brands already use us.</h1>
+                </div>
+                <div class="d-flex pb-5 mb-5 mx-auto container justify-content-sm-between justify-content-center flex-wrap gap-4">
+                
+                    <img src="image/lastknight.png" class="object-fit-contain" alt="">
+                    <img src="image/dragoneye.png" class="object-fit-contain" alt="">    
+                    <img src="image/questai.png" class="object-fit-contain" alt="">
+                    <img src="image/radiotee.png" class="object-fit-contain" alt="">
+                    <img src="image/gamecommerce.png" class="object-fit-contain" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="container col-12 bg-success pb-5" style="width: 100%;">
+            <div class="text-center pt-5 pb-5">
+                <h1 class="playfair display-4 pt-5 pb-5 text-white">Get Started Today!</h1>
+                <button class="btn btn-lg button3 rounded-0 raleway-black lh-lg">PICK A PLAN</button>
+            </div>
+        </div>
+    </main>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="container raleway-bold">
+           <div class="row border-bottom border-3 border-gray gap-4">
+               <div class="col-12 d-flex py-4 align-items-start col-md-5 footer-logo">
+                   <img  class="footer-logo-1" src="image/ninjamail_logo.svg" alt="" style="width: 100px;">
+                   <img class="footer-logo-2 pt-2" src="image/ninjamail.svg" alt="" style="width: 150px;">
+               </div>
+               <div class="col-4 col-md-1 mx-3" style="height: fit-content;">
+                   <ul class="list-unstyled text-small">
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Features</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Pricing</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Services</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Partners</a>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-4 col-md-1 mx-3">
+                   <ul class="list-unstyled text-small">
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">About Us</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Tutorials</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Resources</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Help Center</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Templates</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Case Studies</a>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-4 col-md-1 mx-3">
+                   <ul class="list-unstyled text-small">
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Medium</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Twitter</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Facebook</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Instagram</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">LinkIn</a>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-4 col-md-1 mx-3">
+                   <ul class="list-unstyled text-small">
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Contact Us</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Stack</a>
+                       </li>
+                       <li class="mb-1">
+                           <a href="" class="link-secondary text-decoration-none text-dark">Jobs</a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+        </div>
+        <div class="container">
+            <div class="row pt-5 text-center">
+                <div class="col-7 col-sm-8 footer-bottom">
+                    <p class="raleway-bold">NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All rights reserved.</p>
+                </div>
+                <div class="col-12 col-sm-2 footer-bottom" style="height: fit-content;">
+                    <p class="raleway-bold mb-0">Terms & Conditions</p>
+                </div>
+                <div class="col-12 col-sm-2 footer-bottom">
+                    <p class="raleway-bold">Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+        
+       <!-- place footer here -->
+
+   </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
